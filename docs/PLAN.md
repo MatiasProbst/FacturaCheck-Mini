@@ -2,13 +2,27 @@
 
 Cada etapa se iniciará cuando el usuario la solicite. Al finalizar se explicarán los cambios, las verificaciones realizadas y lo que quede pendiente. No avanzar automáticamente a la siguiente etapa.
 
+## Estado actual: proyecto publicado y documentación de portfolio
+
+- Código público: [MatiasProbst/FacturaCheck-Mini](https://github.com/MatiasProbst/FacturaCheck-Mini), rama `main`.
+- Demo publicada: [FacturaCheck Mini](https://facturacheck-mini.streamlit.app/).
+- README actualizado con acceso destacado a la demo, pasos con los Excel ficticios,
+  problema, funcionalidades, tecnologías y asistencia de Codex durante el desarrollo.
+- Se mantienen las instrucciones de instalación local y las limitaciones de Excel
+  estructurado; no se interpreta automáticamente PDF ni se utiliza IA en las comparaciones.
+- Esta entrega modifica únicamente README y plan. No cambia lógica, interfaz ni dependencias.
+
+Las secciones siguientes registran el historial de las etapas, incluidas las
+restricciones que estaban vigentes antes de autorizar las publicaciones.
+
 ## Publicación del código en GitHub · 29/10/2026
 
 El usuario autoriza el primer commit `Initial release - FacturaCheck Mini` y la
 publicación de `main` en `MatiasProbst/FacturaCheck-Mini`. Se revisan los 19 archivos,
 las exclusiones y el historial, y se ejecutan las 80 pruebas antes de publicar.
 No se sobrescribe contenido remoto ni se utiliza push forzado. No se agrega licencia.
-El despliegue en Streamlit Community Cloud continúa pendiente de autorización.
+En esa etapa el despliegue en Streamlit Community Cloud quedó pendiente; la demo
+ya publicada se registra en el estado actual de este documento.
 
 ## Preparación local para GitHub · 29/10/2026
 

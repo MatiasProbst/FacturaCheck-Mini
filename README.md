@@ -1,8 +1,12 @@
 # FacturaCheck Mini
 
+**[Probar la aplicación online](https://facturacheck-mini.streamlit.app/)** · [Ver el código en GitHub](https://github.com/MatiasProbst/FacturaCheck-Mini)
+
 **Compará órdenes de compra y facturas, detectá inconsistencias y generá informes automáticamente.**
 
 Aplicación de portfolio desarrollada con Python y Streamlit. Ayuda a revisar diferencias de productos, cantidades y precios entre dos archivos Excel estructurados, con reglas explícitas y cálculos monetarios con `Decimal`.
+
+Proyecto desarrollado con asistencia de **Codex**, como parte de un proceso de aprendizaje de Python y desarrollo de aplicaciones con agentes de IA. Las comparaciones y observaciones de la aplicación se ejecutan mediante reglas de Python, sin IA durante su uso.
 
 ## El problema
 
@@ -10,7 +14,14 @@ La revisión manual de una factura contra una orden de compra puede dejar pasar 
 
 ## Demo online
 
-**Próximamente.** Todavía no existe una demo pública. Este espacio se actualizará cuando se autorice y verifique el despliegue.
+La demo está disponible en **[facturacheck-mini.streamlit.app](https://facturacheck-mini.streamlit.app/)**. Podés probarla sin instalar Python utilizando los archivos ficticios incluidos.
+
+1. Abrí la aplicación y descargá los ejemplos desde los botones de **Orden de compra** y **Factura del proveedor**.
+2. Cargá cada Excel en su sección correspondiente.
+3. Revisá las tarjetas y la tabla; usá los filtros para explorar las inconsistencias.
+4. Presioná **Descargar informe Excel** para obtener el resumen, la comparación y las observaciones.
+
+También podés descargar los ejemplos desde el repositorio: [orden de compra](examples/orden_compra.xlsx) y [factura del proveedor](examples/factura_proveedor.xlsx). Usá datos ficticios en la demo pública.
 
 ## Funcionalidades
 
@@ -24,7 +35,7 @@ La revisión manual de una factura contra una orden de compra puede dejar pasar 
 - Descarga de dos ejemplos ficticios desde la propia interfaz.
 - Diseño con componentes nativos que se apilan en pantallas pequeñas; la tabla permite desplazamiento horizontal.
 
-Los filtros afectan únicamente la tabla visible. Las tarjetas y el informe siempre incluyen la comparación completa. No se utiliza IA, bases de datos ni APIs externas.
+Los filtros afectan únicamente la tabla visible. Las tarjetas y el informe siempre incluyen la comparación completa. La aplicación no utiliza IA para procesar archivos, bases de datos ni APIs externas de comparación.
 
 ## Tecnologías
 
@@ -150,14 +161,14 @@ macOS / Linux: reemplazar el ejecutable por `.venv/bin/python`.
 - Supone la misma moneda; no calcula impuestos, descuentos ni conversiones.
 - No consolida productos duplicados ni permite seleccionar otras hojas.
 - Excel limita la precisión de celdas numéricas; no se recuperan dígitos perdidos en el origen. En la exportación, cifras que exceden la precisión admitida se preservan como texto decimal.
-- No hay autenticación, persistencia ni historial. Los archivos se procesan en memoria del servidor y no se modifican los originales. En un futuro despliegue, los archivos se enviarían al servidor de alojamiento: no cargar información confidencial en una demo pública.
+- No hay autenticación, persistencia ni historial. Los archivos se procesan en memoria del servidor y no se modifican los originales. En la demo online, los archivos se envían al servidor de alojamiento: no cargar información confidencial.
 - No se realizaron pruebas de carga masiva ni una auditoría de seguridad independiente.
 
 `.gitignore` excluye entornos, cachés, secretos, configuraciones privadas y documentos locales; solo permite los dos Excel ficticios previstos. Revisar siempre los archivos antes de incorporarlos a Git.
 
 ## Estado de publicación
 
-Repositorio del proyecto: [MatiasProbst/FacturaCheck-Mini](https://github.com/MatiasProbst/FacturaCheck-Mini). La publicación del código está autorizada; todavía no existe una demo online. Para Streamlit Community Cloud, el punto de entrada previsto es `app.py` y están declaradas las bibliotecas necesarias. Antes del despliegue se deberá verificar la instalación en ese entorno y ajustar la dirección local de escucha; **Cloud no fue probado**.
+El código está publicado en [MatiasProbst/FacturaCheck-Mini](https://github.com/MatiasProbst/FacturaCheck-Mini) y la aplicación está disponible en [Streamlit Community Cloud](https://facturacheck-mini.streamlit.app/). El punto de entrada es `app.py`. Se mantienen las instrucciones de instalación local para ejecutar y revisar el proyecto de forma independiente.
 
 No se ha elegido una licencia de reutilización. Es una decisión pendiente del autor antes de presentar el proyecto como software de código abierto.
 
