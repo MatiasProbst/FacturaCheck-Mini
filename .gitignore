@@ -1,0 +1,76 @@
+# Python y compilación
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Pruebas y cobertura
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Configuración local y secretos
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Editores y sistema operativo
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporales de Excel y registros
+~$*.xlsx
+~$*.xls
+*.log
+
+# Archivos privados de entrada y reportes locales (usar datos ficticios)
+data/local/
+reports/local/
+
+# Herramientas y configuraciones privadas
+.codex/
+.agents/
+.aws/
+.ssh/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.tox/
+.nox/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+secrets.*
+*.local
+*.local.*
+
+# Temporales, copias y descargas (solo se versionan los ejemplos autorizados)
+tmp/
+temp/
+downloads/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.pdf
+!/examples/orden_compra.xlsx
+!/examples/factura_proveedor.xlsx
